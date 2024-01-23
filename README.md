@@ -4,7 +4,7 @@ Welcome to my repository where I share my implementations of Data Structures and
 
 ## Table of Contents
 - [Arrays](arrays/)
-- [Linked Lists](linked_lists/)
+- [Linked Lists](linkedlists/)
 - [Stacks](stacks/)
 - [Queues](queues/)
 - [Trees](trees/)
