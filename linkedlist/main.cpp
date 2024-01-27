@@ -33,6 +33,27 @@ public:
         }
         cout<<"nullptr"<<endl;
     }
+    void delete(int value){
+        Node *temp=head;
+        if(temp && temp->data == value){
+            head=temp->next;
+            delete temp;
+            cout << "Element " << value << " deleted successfully." << endl;
+            return;
+        }
+        while(temp && temp->data&& temp->next->data != value){
+            temp=temp->next;
+        }
+        if (temp && temp->next) {
+            Node *deleteNode = temp->next;
+            temp->next = temp->next->next;
+            delete deleteNode;
+            cout << "Element " << value << " deleted successfully." << endl;
+        }
+        else{
+            cout<<"element not found"<<endl;
+        }
+    }
 
 };
 
@@ -41,7 +62,7 @@ int main()
     LinkedList myList;
     int op;
     while(op!=3){
-        cout << "1.INSERT \n2.Display\n3.Exit" << endl;
+        cout << "1.INSERT \n2.Display\n3.Delete\n4.Exit\nEnter Option: ";
         cin>>op;
         switch(op){
             case 1:
@@ -52,6 +73,11 @@ int main()
                 break;
             case 2: myList.display();
                 break;
+            case 3:
+                int ele;
+                cout<<"Enter element to delete: ";
+                cin>>ele;
+                myList.delete(ele);
             case 3: cout<<"Exting"<<endl;
                 break;
             default:cout<<"Invalid input"<<endl;
