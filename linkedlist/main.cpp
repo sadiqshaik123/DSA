@@ -79,6 +79,7 @@ int main()
                 cout<<"Enter element to delete: ";
                 cin>>ele;
                 myList.deleteNode(ele);
+                break;
             case 4: cout<<"Exting"<<endl;
                 break;
             default:cout<<"Invalid input"<<endl;
