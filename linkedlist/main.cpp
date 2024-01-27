@@ -61,7 +61,7 @@ int main()
 {
     LinkedList myList;
     int op;
-    while(op!=3){
+    while(op!=4){
         cout << "1.INSERT \n2.Display\n3.Delete\n4.Exit\nEnter Option: ";
         cin>>op;
         switch(op){
@@ -78,7 +78,7 @@ int main()
                 cout<<"Enter element to delete: ";
                 cin>>ele;
                 myList.delete(ele);
-            case 3: cout<<"Exting"<<endl;
+            case 4: cout<<"Exting"<<endl;
                 break;
             default:cout<<"Invalid input"<<endl;
                 break;
