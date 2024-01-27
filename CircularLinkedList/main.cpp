@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 struct Node{
     int data;
@@ -8,12 +8,13 @@ struct Node{
         next=nullptr;
     }
 };
-class CLinkedList{
+class ClinkedList{
 public:
     Node *head;
-    CLinkedList(){
+    ClinkedList(){
         head=nullptr;
     }
+
     void insert(int value){
         Node *NewNode=new Node(value);
         if(!head){
@@ -22,13 +23,14 @@ public:
         }
         else{
             Node *temp=head;
-            while(temp->next!=head){
+            if(temp->next!=head){
                 temp=temp->next;
             }
             temp->next=NewNode;
             NewNode->next=head;
         }
     }
+
     void display(){
         Node *temp=head;
         do{
@@ -37,13 +39,24 @@ public:
         }while(temp!=head);
         cout<<"head: "<<head->data<<endl;
     }
+    void deleteNode(int value){
+        Node *temp=head;
+        while(temp->next->data!=value){
+            temp=temp->next;
+        }
+        Node *todelete=temp->next;
+        temp->next=temp->next->next;
+       
+        delete todelete;
+
+    }
 };
 int main()
 {
-    CLinkedList myList;
+    ClinkedList myList;
     int op;
-    while(op!=3){
-        cout << "1.INSERT \n2.Display\n3.Exit\nChoose Option: ";
+    while(op!=4){
+        cout << "1.INSERT \n2.Display\n3.Delete\n4.Exit\nChoose Option: ";
         cin>>op;
         switch(op){
             case 1:
@@ -58,7 +71,14 @@ int main()
                 cout<<"Circular LinkedList: ";
                 myList.display();
                 break;
-            case 3: cout<<"Exiting"<<endl;
+            case 3:
+                int n;
+                cout<<"Enter Element to delete: ";
+                cin>>n;
+                myList.deleteNode(n);
+                break;
+            case 4:
+                cout<<"exiting"<<endl;
                 break;
             default:cout<<"Invalid input"<<endl;
                 break;
