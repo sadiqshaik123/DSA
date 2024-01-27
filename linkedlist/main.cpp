@@ -33,7 +33,8 @@ public:
         }
         cout<<"nullptr"<<endl;
     }
-    void delete(int value){
+
+    void deleteNode(int value){
         Node *temp=head;
         if(temp && temp->data == value){
             head=temp->next;
@@ -77,7 +78,7 @@ int main()
                 int ele;
                 cout<<"Enter element to delete: ";
                 cin>>ele;
-                myList.delete(ele);
+                myList.deleteNode(ele);
             case 4: cout<<"Exting"<<endl;
                 break;
             default:cout<<"Invalid input"<<endl;
