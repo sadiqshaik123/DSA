@@ -19,7 +19,4 @@ Visit my portfolio for more information about me and my projects: [SADIQSHAIK](h
 ## Contributing
 If you have suggestions, improvements, or would like to contribute to this repository, please feel free to open an issue or submit a pull request. Contributions are welcome!
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 Happy Coding! 🚀
