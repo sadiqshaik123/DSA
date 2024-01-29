@@ -3,7 +3,6 @@
 Welcome to my repository where I share my implementations of Data Structures and Algorithms in C++. In this collection, you'll find well-commented code for various DSA topics, helping you understand and implement these concepts in your own projects or competitive programming practice.
 
 ## Table of Contents
-- 
 - Linked Lists
 - Stacks
 - Queues
